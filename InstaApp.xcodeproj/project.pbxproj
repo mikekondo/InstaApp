@@ -7,20 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		953593D3288BA0ED000A70B3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953593D2288BA0ED000A70B3 /* LoginViewController.swift */; };
+		953593D6288BB44F000A70B3 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953593D5288BB44F000A70B3 /* UIImageView.swift */; };
+		953593DA288BD1B7000A70B3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953593D9288BD1B7000A70B3 /* HomeViewController.swift */; };
+		953593DC288BD1CD000A70B3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953593DB288BD1CD000A70B3 /* ProfileViewController.swift */; };
 		958DB197288B91F600A8A9D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958DB196288B91F600A8A9D1 /* AppDelegate.swift */; };
 		958DB199288B91F600A8A9D1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958DB198288B91F600A8A9D1 /* SceneDelegate.swift */; };
 		958DB19E288B91F600A8A9D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 958DB19C288B91F600A8A9D1 /* Main.storyboard */; };
 		958DB1A0288B91F700A8A9D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 958DB19F288B91F700A8A9D1 /* Assets.xcassets */; };
 		958DB1A3288B91F700A8A9D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 958DB1A1288B91F700A8A9D1 /* LaunchScreen.storyboard */; };
 		958DB1AB288B92FC00A8A9D1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 958DB1AA288B92FC00A8A9D1 /* GoogleService-Info.plist */; };
-		958DB1B0288B940900A8A9D1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958DB1AF288B940900A8A9D1 /* LoginViewController.swift */; };
 		958DB1B4288B976C00A8A9D1 /* SendDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958DB1B3288B976C00A8A9D1 /* SendDB.swift */; };
 		958DB1B6288B977400A8A9D1 /* LoadDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958DB1B5288B977400A8A9D1 /* LoadDB.swift */; };
+		958DB1B8288B991B00A8A9D1 /* CheckModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958DB1B7288B991B00A8A9D1 /* CheckModel.swift */; };
 		B0EB6DE1A42964FD707C1C32 /* Pods_InstaApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D24DE6D5111422B3C61545F9 /* Pods_InstaApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3AFB707C24FDB3474DCD3525 /* Pods-InstaApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaApp.debug.xcconfig"; path = "Target Support Files/Pods-InstaApp/Pods-InstaApp.debug.xcconfig"; sourceTree = "<group>"; };
+		953593D2288BA0ED000A70B3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		953593D5288BB44F000A70B3 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		953593D9288BD1B7000A70B3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		953593DB288BD1CD000A70B3 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		958DB193288B91F600A8A9D1 /* InstaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		958DB196288B91F600A8A9D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		958DB198288B91F600A8A9D1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -29,9 +37,9 @@
 		958DB1A2288B91F700A8A9D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		958DB1A4288B91F700A8A9D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		958DB1AA288B92FC00A8A9D1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		958DB1AF288B940900A8A9D1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		958DB1B3288B976C00A8A9D1 /* SendDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendDB.swift; sourceTree = "<group>"; };
 		958DB1B5288B977400A8A9D1 /* LoadDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadDB.swift; sourceTree = "<group>"; };
+		958DB1B7288B991B00A8A9D1 /* CheckModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckModel.swift; sourceTree = "<group>"; };
 		D24DE6D5111422B3C61545F9 /* Pods_InstaApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstaApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC39606060F8083E355F6B4F /* Pods-InstaApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaApp.release.xcconfig"; path = "Target Support Files/Pods-InstaApp/Pods-InstaApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -48,6 +56,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		953593D4288BB40A000A70B3 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				953593D5288BB44F000A70B3 /* UIImageView.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		958DB18A288B91F600A8A9D1 = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +85,7 @@
 		958DB195288B91F600A8A9D1 /* InstaApp */ = {
 			isa = PBXGroup;
 			children = (
+				953593D4288BB40A000A70B3 /* Extension */,
 				958DB1AE288B93CE00A8A9D1 /* Model */,
 				958DB1AD288B93C500A8A9D1 /* View */,
 				958DB1AC288B93B900A8A9D1 /* Controller */,
@@ -81,9 +98,11 @@
 		958DB1AC288B93B900A8A9D1 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				958DB1AF288B940900A8A9D1 /* LoginViewController.swift */,
 				958DB196288B91F600A8A9D1 /* AppDelegate.swift */,
 				958DB198288B91F600A8A9D1 /* SceneDelegate.swift */,
+				953593D2288BA0ED000A70B3 /* LoginViewController.swift */,
+				953593D9288BD1B7000A70B3 /* HomeViewController.swift */,
+				953593DB288BD1CD000A70B3 /* ProfileViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -103,6 +122,7 @@
 			children = (
 				958DB1B3288B976C00A8A9D1 /* SendDB.swift */,
 				958DB1B5288B977400A8A9D1 /* LoadDB.swift */,
+				958DB1B7288B991B00A8A9D1 /* CheckModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -240,9 +260,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				958DB1B0288B940900A8A9D1 /* LoginViewController.swift in Sources */,
 				958DB1B6288B977400A8A9D1 /* LoadDB.swift in Sources */,
+				958DB1B8288B991B00A8A9D1 /* CheckModel.swift in Sources */,
+				953593D6288BB44F000A70B3 /* UIImageView.swift in Sources */,
+				953593DA288BD1B7000A70B3 /* HomeViewController.swift in Sources */,
 				958DB1B4288B976C00A8A9D1 /* SendDB.swift in Sources */,
+				953593D3288BA0ED000A70B3 /* LoginViewController.swift in Sources */,
+				953593DC288BD1CD000A70B3 /* ProfileViewController.swift in Sources */,
 				958DB197288B91F600A8A9D1 /* AppDelegate.swift in Sources */,
 				958DB199288B91F600A8A9D1 /* SceneDelegate.swift in Sources */,
 			);
