@@ -14,6 +14,7 @@
 		958DB1A3288B91F700A8A9D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 958DB1A1288B91F700A8A9D1 /* LaunchScreen.storyboard */; };
 		958DB1AB288B92FC00A8A9D1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 958DB1AA288B92FC00A8A9D1 /* GoogleService-Info.plist */; };
 		958DB1B0288B940900A8A9D1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958DB1AF288B940900A8A9D1 /* LoginViewController.swift */; };
+		958DB1B2288B96AA00A8A9D1 /* .gitignore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958DB1B1288B96AA00A8A9D1 /* .gitignore.swift */; };
 		B0EB6DE1A42964FD707C1C32 /* Pods_InstaApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D24DE6D5111422B3C61545F9 /* Pods_InstaApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +29,7 @@
 		958DB1A4288B91F700A8A9D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		958DB1AA288B92FC00A8A9D1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		958DB1AF288B940900A8A9D1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		958DB1B1288B96AA00A8A9D1 /* .gitignore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = .gitignore.swift; sourceTree = "<group>"; };
 		D24DE6D5111422B3C61545F9 /* Pods_InstaApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstaApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC39606060F8083E355F6B4F /* Pods-InstaApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaApp.release.xcconfig"; path = "Target Support Files/Pods-InstaApp/Pods-InstaApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,6 +75,7 @@
 				958DB1A1288B91F700A8A9D1 /* LaunchScreen.storyboard */,
 				958DB1A4288B91F700A8A9D1 /* Info.plist */,
 				958DB1AA288B92FC00A8A9D1 /* GoogleService-Info.plist */,
+				958DB1B1288B96AA00A8A9D1 /* .gitignore.swift */,
 			);
 			path = InstaApp;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				958DB1B0288B940900A8A9D1 /* LoginViewController.swift in Sources */,
+				958DB1B2288B96AA00A8A9D1 /* .gitignore.swift in Sources */,
 				958DB197288B91F600A8A9D1 /* AppDelegate.swift in Sources */,
 				958DB199288B91F600A8A9D1 /* SceneDelegate.swift in Sources */,
 			);
