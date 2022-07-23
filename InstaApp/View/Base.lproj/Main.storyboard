@@ -28,6 +28,9 @@
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="決定"/>
+                                <connections>
+                                    <action selector="didTapCreateUserButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pUl-Eb-sdM"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="noImage" translatesAutoresizingMaskIntoConstraints="NO" id="6PR-0u-b4U">
                                 <rect key="frame" x="67" y="82" width="240" height="240"/>
@@ -41,9 +44,17 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGray3Color"/>
                     </view>
+                    <connections>
+                        <outlet property="userImageView" destination="6PR-0u-b4U" id="UJ9-3p-tI7"/>
+                        <outlet property="userNameTextField" destination="1eh-fr-vay" id="OEe-82-04W"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="uai-mM-0ri"/>
+                <tapGestureRecognizer id="uai-mM-0ri">
+                    <connections>
+                        <action selector="didTapImage:" destination="BYZ-38-t0r" id="lNJ-5A-CGM"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="205.59999999999999" y="74.630541871921181"/>
         </scene>
