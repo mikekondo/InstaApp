@@ -8,5 +8,7 @@
 import UIKit
 
 extension UIImageView{
-   
+    func circleTrim(){
+        self.layer.cornerRadius = self.frame.width*0.5
+    }
 }

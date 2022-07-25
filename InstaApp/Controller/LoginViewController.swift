@@ -16,10 +16,11 @@ class LoginViewController: UIViewController {
     @IBOutlet private weak var userNameTextField: UITextField!
 
     let db = Firestore.firestore()
+    let sendDB = SendDB()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        userImageView.layer.cornerRadius = userImageView.frame.width*0.5
+        userImageView.circleTrim()
         let checkModel = CheckModel()
         checkModel.showCheckPermission()
 
@@ -30,51 +31,17 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func didTapCreateUser(_ sender: Any) {
-        let userName = userNameTextField.text ?? ""
-        var profileImageString = ""
-        Auth.auth().signInAnonymously { result, error in
-            if let error = error{
-                print("signInAnoymouslyのerror",error)
-                return
-            }
+        if let userName = userNameTextField.text,let userImage = userImageView.image{
+            sendDB.createUser(userName: userName, profileImage: userImage)
         }
-        // Firestoreにユーザ情報を保存
-        let uid = Auth.auth().currentUser?.uid
-        guard let uid = uid else{
-            return
-        }
-        let usersDB = db.collection("users").document("\(uid)")
-        let profileImageData = userImageView.image?.jpegData(compressionQuality: 0.01)
-        guard let profileImageData = profileImageData else {
-            return
-        }
-
-        let imageRef = Storage.storage().reference().child("profileImage").child("\(UUID().uuidString)")
-        imageRef.putData(profileImageData, metadata: nil) { metadata, error in
-            if let error = error {
-                print("putDataのエラー",error)
-            }
-            imageRef.downloadURL { url, error in
-                if let error = error {
-                    print("downloadURLのエラー",error)
-                }
-                profileImageString = url!.absoluteString
-                // プロフィール画像と名前を保存
-                UserDefaults.standard.setValue(userName, forKey: "userNameKey")
-                UserDefaults.standard.setValue(profileImageString, forKey: "profileImageKey")
-                usersDB.setData(["userName" : userName,"profileImageString" : profileImageString,"createTime": Timestamp(),"uid":uid,"postData":Date().timeIntervalSince1970]) { error in
-                    if let error = error{
-                        print("setDataのエラー",error)
-                    }
-                    print("Firestoreへのユーザ情報の保存完了")
-                }
-            }
-        }
-        // 画面遷移
-        let homeVC = self.storyboard?.instantiateViewController(withIdentifier: "HomeVC") as! HomeViewController
-        self.present(homeVC, animated: true, completion: nil)
-
     }
+
+    @IBAction private func didTapLogoutButton(_ sender: Any) {
+        sendDB.signOut()
+        userNameTextField.text = ""
+        userImageView.image = UIImage(named: "noImage")
+    }
+
 
     func doCamera(){
         let sourceType: UIImagePickerController.SourceType = .camera

@@ -8,9 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		953593D3288BA0ED000A70B3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953593D2288BA0ED000A70B3 /* LoginViewController.swift */; };
-		953593D6288BB44F000A70B3 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953593D5288BB44F000A70B3 /* UIImageView.swift */; };
-		953593DA288BD1B7000A70B3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953593D9288BD1B7000A70B3 /* HomeViewController.swift */; };
+		953593D6288BB44F000A70B3 /* UIImage-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953593D5288BB44F000A70B3 /* UIImage-Extension.swift */; };
+		953593DA288BD1B7000A70B3 /* TimeLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953593D9288BD1B7000A70B3 /* TimeLineViewController.swift */; };
 		953593DC288BD1CD000A70B3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953593DB288BD1CD000A70B3 /* ProfileViewController.swift */; };
+		9570E7F2288E0FD20033F3A8 /* TimeLineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9570E7F0288E0FD20033F3A8 /* TimeLineTableViewCell.swift */; };
+		9570E7F3288E0FD20033F3A8 /* TimeLineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9570E7F1288E0FD20033F3A8 /* TimeLineTableViewCell.xib */; };
+		9570E7F5288E10C40033F3A8 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9570E7F4288E10C40033F3A8 /* Post.swift */; };
+		9580132D288D2EB7009138A5 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9580132C288D2EB7009138A5 /* PostViewController.swift */; };
 		958DB197288B91F600A8A9D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958DB196288B91F600A8A9D1 /* AppDelegate.swift */; };
 		958DB199288B91F600A8A9D1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958DB198288B91F600A8A9D1 /* SceneDelegate.swift */; };
 		958DB19E288B91F600A8A9D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 958DB19C288B91F600A8A9D1 /* Main.storyboard */; };
@@ -26,9 +30,13 @@
 /* Begin PBXFileReference section */
 		3AFB707C24FDB3474DCD3525 /* Pods-InstaApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaApp.debug.xcconfig"; path = "Target Support Files/Pods-InstaApp/Pods-InstaApp.debug.xcconfig"; sourceTree = "<group>"; };
 		953593D2288BA0ED000A70B3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		953593D5288BB44F000A70B3 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
-		953593D9288BD1B7000A70B3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		953593D5288BB44F000A70B3 /* UIImage-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage-Extension.swift"; sourceTree = "<group>"; };
+		953593D9288BD1B7000A70B3 /* TimeLineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineViewController.swift; sourceTree = "<group>"; };
 		953593DB288BD1CD000A70B3 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		9570E7F0288E0FD20033F3A8 /* TimeLineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineTableViewCell.swift; sourceTree = "<group>"; };
+		9570E7F1288E0FD20033F3A8 /* TimeLineTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeLineTableViewCell.xib; sourceTree = "<group>"; };
+		9570E7F4288E10C40033F3A8 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		9580132C288D2EB7009138A5 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		958DB193288B91F600A8A9D1 /* InstaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		958DB196288B91F600A8A9D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		958DB198288B91F600A8A9D1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,7 +67,7 @@
 		953593D4288BB40A000A70B3 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				953593D5288BB44F000A70B3 /* UIImageView.swift */,
+				953593D5288BB44F000A70B3 /* UIImage-Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -101,7 +109,8 @@
 				958DB196288B91F600A8A9D1 /* AppDelegate.swift */,
 				958DB198288B91F600A8A9D1 /* SceneDelegate.swift */,
 				953593D2288BA0ED000A70B3 /* LoginViewController.swift */,
-				953593D9288BD1B7000A70B3 /* HomeViewController.swift */,
+				9580132C288D2EB7009138A5 /* PostViewController.swift */,
+				953593D9288BD1B7000A70B3 /* TimeLineViewController.swift */,
 				953593DB288BD1CD000A70B3 /* ProfileViewController.swift */,
 			);
 			path = Controller;
@@ -113,6 +122,8 @@
 				958DB19C288B91F600A8A9D1 /* Main.storyboard */,
 				958DB19F288B91F700A8A9D1 /* Assets.xcassets */,
 				958DB1A1288B91F700A8A9D1 /* LaunchScreen.storyboard */,
+				9570E7F0288E0FD20033F3A8 /* TimeLineTableViewCell.swift */,
+				9570E7F1288E0FD20033F3A8 /* TimeLineTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -123,6 +134,7 @@
 				958DB1B3288B976C00A8A9D1 /* SendDB.swift */,
 				958DB1B5288B977400A8A9D1 /* LoadDB.swift */,
 				958DB1B7288B991B00A8A9D1 /* CheckModel.swift */,
+				9570E7F4288E10C40033F3A8 /* Post.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -204,6 +216,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9570E7F3288E0FD20033F3A8 /* TimeLineTableViewCell.xib in Resources */,
 				958DB1A3288B91F700A8A9D1 /* LaunchScreen.storyboard in Resources */,
 				958DB1A0288B91F700A8A9D1 /* Assets.xcassets in Resources */,
 				958DB19E288B91F600A8A9D1 /* Main.storyboard in Resources */,
@@ -262,10 +275,13 @@
 			files = (
 				958DB1B6288B977400A8A9D1 /* LoadDB.swift in Sources */,
 				958DB1B8288B991B00A8A9D1 /* CheckModel.swift in Sources */,
-				953593D6288BB44F000A70B3 /* UIImageView.swift in Sources */,
-				953593DA288BD1B7000A70B3 /* HomeViewController.swift in Sources */,
+				953593D6288BB44F000A70B3 /* UIImage-Extension.swift in Sources */,
+				9570E7F5288E10C40033F3A8 /* Post.swift in Sources */,
+				953593DA288BD1B7000A70B3 /* TimeLineViewController.swift in Sources */,
+				9580132D288D2EB7009138A5 /* PostViewController.swift in Sources */,
 				958DB1B4288B976C00A8A9D1 /* SendDB.swift in Sources */,
 				953593D3288BA0ED000A70B3 /* LoginViewController.swift in Sources */,
+				9570E7F2288E0FD20033F3A8 /* TimeLineTableViewCell.swift in Sources */,
 				953593DC288BD1CD000A70B3 /* ProfileViewController.swift in Sources */,
 				958DB197288B91F600A8A9D1 /* AppDelegate.swift in Sources */,
 				958DB199288B91F600A8A9D1 /* SceneDelegate.swift in Sources */,
