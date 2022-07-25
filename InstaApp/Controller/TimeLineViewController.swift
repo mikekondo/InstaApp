@@ -21,7 +21,7 @@ class TimeLineViewController: UIViewController {
         loadDB.delegate = self
     }
     override func viewWillAppear(_ animated: Bool) {
-        loadDB.loadPostData()
+        loadDB.fetchPostData()
     }
 }
 

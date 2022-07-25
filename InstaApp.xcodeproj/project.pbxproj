@@ -24,6 +24,7 @@
 		958DB1B4288B976C00A8A9D1 /* SendDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958DB1B3288B976C00A8A9D1 /* SendDB.swift */; };
 		958DB1B6288B977400A8A9D1 /* LoadDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958DB1B5288B977400A8A9D1 /* LoadDB.swift */; };
 		958DB1B8288B991B00A8A9D1 /* CheckModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958DB1B7288B991B00A8A9D1 /* CheckModel.swift */; };
+		95937AA9288E69EA008C203D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95937AA8288E69EA008C203D /* User.swift */; };
 		B0EB6DE1A42964FD707C1C32 /* Pods_InstaApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D24DE6D5111422B3C61545F9 /* Pods_InstaApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,7 @@
 		958DB1B3288B976C00A8A9D1 /* SendDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendDB.swift; sourceTree = "<group>"; };
 		958DB1B5288B977400A8A9D1 /* LoadDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadDB.swift; sourceTree = "<group>"; };
 		958DB1B7288B991B00A8A9D1 /* CheckModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckModel.swift; sourceTree = "<group>"; };
+		95937AA8288E69EA008C203D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D24DE6D5111422B3C61545F9 /* Pods_InstaApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstaApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC39606060F8083E355F6B4F /* Pods-InstaApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaApp.release.xcconfig"; path = "Target Support Files/Pods-InstaApp/Pods-InstaApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -135,6 +137,7 @@
 				958DB1B5288B977400A8A9D1 /* LoadDB.swift */,
 				958DB1B7288B991B00A8A9D1 /* CheckModel.swift */,
 				9570E7F4288E10C40033F3A8 /* Post.swift */,
+				95937AA8288E69EA008C203D /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95937AA9288E69EA008C203D /* User.swift in Sources */,
 				958DB1B6288B977400A8A9D1 /* LoadDB.swift in Sources */,
 				958DB1B8288B991B00A8A9D1 /* CheckModel.swift in Sources */,
 				953593D6288BB44F000A70B3 /* UIImage-Extension.swift in Sources */,

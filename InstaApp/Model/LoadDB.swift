@@ -19,7 +19,7 @@ class LoadDB{
     var postDataSets = [Post]()
     var delegate: loadDoneDelegate?
 
-    func loadPostData(){
+    func fetchPostData(){
         let postDB = db.collection("post")
         postDB.order(by: "postData").addSnapshotListener { snapShot, error in
             self.postDataSets = [] // ここで空にしないとバグる
@@ -41,11 +41,9 @@ class LoadDB{
         }
     }
 
-    func loadMyPostData(){
+    func fetchMyPostData(){
         let postDB = db.collection("post")
-        guard let uid = Auth.auth().currentUser?.uid else{
-            return
-        }
+        guard let uid = Auth.auth().currentUser?.uid else{ return }
         postDB.order(by: "postData").whereField("userRef", isEqualTo: "/userRef/\(uid)").addSnapshotListener { snapShot, error in
             self.postDataSets = [] // ここで空にしないとバグる
             if let error = error{
@@ -63,6 +61,18 @@ class LoadDB{
                 }
                 self.delegate?.loadOK(judge: true)
             }
+        }
+    }
+
+    func fetchUserFromFirestore(uid: String,completion: @escaping(User?) -> Void){
+        let userDB = db.collection("users").document("\(uid)")
+        userDB.getDocument { snapShot, error in
+            if let error = error{
+                print("getDocumentのエラー",error)
+            }
+            guard let data = snapShot?.data() else { return }
+            let user = User(dic: data)
+            completion(user)
         }
     }
 }

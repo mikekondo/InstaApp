@@ -7,6 +7,8 @@
 
 import UIKit
 import SDWebImage
+import Firebase
+import FirebaseAuth
 
 class ProfileViewController: UIViewController {
 
@@ -18,12 +20,13 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupDelegate()
+        postCountLabel.text = "投稿 \(loadDB.postDataSets.count)"
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setupUserView()
-        loadDB.loadMyPostData()
+        loadDB.fetchMyPostData()
     }
 
     private func setupDelegate(){
@@ -33,10 +36,17 @@ class ProfileViewController: UIViewController {
     }
 
     private func setupUserView(){
-        userNameLabel.text = UserDefaults.standard.object(forKey: "userNameKey") as! String
-        let profileImageString = UserDefaults.standard.object(forKey: "profileImageStringKey") as! String
-        userImageView.sd_setImage(with: URL(string: profileImageString))
-        userImageView.circleTrim()
+        guard let uid = Auth.auth().currentUser?.uid else{ return }
+        loadDB.fetchUserFromFirestore(uid: uid) { user in
+            guard let user = user else {
+                print("ユーザの情報が取得できませんでした")
+                return
+            }
+            print("ユーザの情報を取得しました")
+            self.userNameLabel.text = user.userName
+            self.userImageView.sd_setImage(with: URL(string: user.profileImageString))
+            self.userImageView.circleTrim()
+        }
     }
 
     func doAlbum(){

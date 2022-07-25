@@ -35,10 +35,10 @@ class SendDB{
                 guard let profileImageString = url?.absoluteString else{
                     return
                 }
-                UserDefaults.standard.removeObject(forKey: "profileImageStringKey")
-                UserDefaults.standard.removeObject(forKey: "userNameKey")
-                UserDefaults.standard.setValue(profileImageString, forKey: "profileImageStringKey")
-                UserDefaults.standard.setValue(userName, forKey: "userNameKey")
+//                UserDefaults.standard.removeObject(forKey: "profileImageStringKey")
+//                UserDefaults.standard.removeObject(forKey: "userNameKey")
+//                UserDefaults.standard.setValue(profileImageString, forKey: "profileImageStringKey")
+//                UserDefaults.standard.setValue(userName, forKey: "userNameKey")
                 self.sendUserData(userName: userName, profileImageString: profileImageString, uid: uid)
             }
         }
