@@ -35,10 +35,6 @@ class SendDB{
                 guard let profileImageString = url?.absoluteString else{
                     return
                 }
-//                UserDefaults.standard.removeObject(forKey: "profileImageStringKey")
-//                UserDefaults.standard.removeObject(forKey: "userNameKey")
-//                UserDefaults.standard.setValue(profileImageString, forKey: "profileImageStringKey")
-//                UserDefaults.standard.setValue(userName, forKey: "userNameKey")
                 self.sendUserData(userName: userName, profileImageString: profileImageString, uid: uid)
             }
         }
@@ -88,7 +84,6 @@ class SendDB{
 
     }
 
-    // MARK: createUserのみ使用するメソッド
     private func signIn(){
         Auth.auth().signInAnonymously { result, error in
             if let error = error{
@@ -98,6 +93,7 @@ class SendDB{
         }
     }
 
+    // Firestoreにユーザ情報を送信
     private func sendUserData(userName: String,profileImageString: String,uid: String){
         let userDB = db.collection("users").document("\(uid)")
         userDB.setData(["userName": userName,"profileImageString": profileImageString,"createTime": Timestamp(),"uid": uid,"postData": Date().timeIntervalSince1970]) { error in
@@ -108,6 +104,7 @@ class SendDB{
         }
     }
 
+    // Firestoreに投稿情報を送信
     private func sendPostData(userName: String,comment: String,profileImageString: String,uid: String,postDataImageString: String){
         let postDB = self.db.collection("post").document()
         postDB.setData(["userRef": "/userRef/\(uid)","comment": comment,"postDataImageString": postDataImageString,"userName": userName,"userImageString": profileImageString,"createTime": Timestamp(),"postData": Date().timeIntervalSince1970]) { error in

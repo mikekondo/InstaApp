@@ -19,6 +19,7 @@ class LoadDB{
     var postDataSets = [Post]()
     var delegate: loadDoneDelegate?
 
+    // Firestoreから投稿された順番にソートした全投稿データを取得
     func fetchPostData(){
         let postDB = db.collection("post")
         postDB.order(by: "postData").addSnapshotListener { snapShot, error in
@@ -41,6 +42,7 @@ class LoadDB{
         }
     }
 
+    // Firestoreから自分が投稿した投稿データを取得
     func fetchMyPostData(){
         let postDB = db.collection("post")
         guard let uid = Auth.auth().currentUser?.uid else{ return }
@@ -64,6 +66,7 @@ class LoadDB{
         }
     }
 
+    // Firestoreからユーザ情報を取得する
     func fetchUserFromFirestore(uid: String,completion: @escaping(User?) -> Void){
         let userDB = db.collection("users").document("\(uid)")
         userDB.getDocument { snapShot, error in
